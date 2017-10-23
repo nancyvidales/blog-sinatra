@@ -1,13 +1,60 @@
 <html>
 <head>
 	<title>New</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 <body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">A Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/new">New Post</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+	</nav>
+	<br><br><br>
 
-	<form action ="/create" method="POST">
-		Title:<input type="text" name="title"><br>
-		Body:<input type="text" name="body"><br>
-		<input type="submit" value="submit">
-	</form>
+	<div class="container">
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-header">New Post: </h5><br>
+				<form action ="/create" method="POST">
+					<div class="form-group">
+						<label for="title-label">Title</label>
+						<input class="form-control" type="text" name="title" id="title-label"><br>
+					</div>
+					<div class="form-group">
+						<label for="body-label">Body</label>
+						<textarea class="form-control" type="text" name="body" id="body-label" rows="10"></textarea>
+					</div>
+					<input type="submit" class="btn btn-success" value="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<footer class="center">
+		<p>
+	        <a href="#">Back to top</a>
+	    </p>
+    </footer>
+    <br>
+    
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 <html>

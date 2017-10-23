@@ -26,6 +26,7 @@ DataMapper.finalize
 Post.auto_upgrade!
 
 get '/new' do
+	@headline = "New Post"
 	erb :new
 end
 
@@ -42,7 +43,7 @@ end
 get '/' do
 	#load all posts
 	#display them
-	@title = "All posts"
+	@title = "A Blog"
 	@headline = "My life in blog"
 	@paragraph = "Follow me plz. Follow 4 Follow."
 	@posts = Post.all
